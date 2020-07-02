@@ -18,7 +18,7 @@ wget -O - https://raw.githubusercontent.com/icanfixitweb/Hassio-Virtual-Machine/
 ##### Install dependencies
 * `sudo apt-get install bash jq curl avahi-daemon dbus software-properties-common apparmor-utils`
  
-##### Install Docker (Ubuntu)
+##### Install Docker (Ubuntu) ([Linux Mint users follow these instructions](https://github.com/icanfixitweb/Hassio-Virtual-Machine/tree/master/hassio_install_script#install-docker-linux-mint))
 * `sudo apt-get install apt-transport-https ca-certificates curl software-properties-common -y`
 * `curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -`
 * `sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"`
