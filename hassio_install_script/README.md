@@ -25,20 +25,20 @@ wget -O - https://raw.githubusercontent.com/icanfixitweb/Hassio-Virtual-Machine/
 * `sudo apt-get update`
 * `sudo apt-get install docker-ce -y`
 
-##### Install docker (Linux Mint)
-* `sudo apt-get install apt-transport-https ca-certificates curl software-properties-common -y`
-* `curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -`
-
-open the "additional-repositories.list"
-* `sudo nano /etc/apt/sources.list.d/additional-repositories.list`
-
-add the following line in the file
-* `deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable`
-
-close the file with `CTRL+X` and press `Y` on your keyboard to save and continue with the rest of the installation
-* `sudo apt update`
-* `sudo apt-get update`
-* `sudo apt-get install docker-ce -y`
+> ##### Install docker (Linux Mint)
+> * `sudo apt-get install apt-transport-https ca-certificates curl software-properties-common -y`
+> * `curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -`
+> 
+> open the "additional-repositories.list"
+> * `sudo nano /etc/apt/sources.list.d/additional-repositories.list`
+> 
+> add the following line in the file
+> * `deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable`
+> 
+> close the file with `CTRL+X` and press `Y` on your keyboard to save and continue with the rest of the installation
+> * `sudo apt update`
+> * `sudo apt-get update`
+> * `sudo apt-get install docker-ce -y`
 
 ##### Install Home Assistant
 * `curl -sL https://raw.githubusercontent.com/icanfixitweb/Hassio-Virtual-Machine/master/hassio_install_script/original_script/installer.sh | bash -s -- -d /home/me/docker/hassio`
