@@ -5,6 +5,8 @@
 
 The command below will execute the [`install_hassio.sh`](https://github.com/icanfixitweb/Hassio-Virtual-Machine/blob/master/hassio_install_script/install_hassio.sh) script to install Home Assistant and its dependencies automatically.
 
+**[IMPORTANT]** If you are using Linux Mint the Automated Script will not work, you must follow the [Manual Installation](https://github.com/icanfixitweb/Hassio-Virtual-Machine/tree/master/hassio_install_script#manual-installation) method below.
+
 ```
 sudo su
 wget -O - https://raw.githubusercontent.com/icanfixitweb/Hassio-Virtual-Machine/master/hassio_install_script/install_hassio.sh | bash
@@ -16,10 +18,25 @@ wget -O - https://raw.githubusercontent.com/icanfixitweb/Hassio-Virtual-Machine/
 ##### Install dependencies
 * `sudo apt-get install bash jq curl avahi-daemon dbus software-properties-common apparmor-utils`
  
-##### Install docker
+##### Install docker (Ubuntu)
 * `sudo apt-get install apt-transport-https ca-certificates curl software-properties-common -y`
 * `curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -`
 * `sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"`
+* `sudo apt-get update`
+* `sudo apt-get install docker-ce -y`
+
+##### Install docker (Linux Mint)
+* `sudo apt-get install apt-transport-https ca-certificates curl software-properties-common -y`
+* `curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -`
+
+open the "additional-repositories.list"
+* `sudo nano /etc/apt/sources.list.d/additional-repositories.list`
+
+add the following line in the file
+* `deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable`
+
+close the file with `CTRL+X` and press `Y` on your keyboard to save and continue with the rest of the installation
+* `sudo apt update`
 * `sudo apt-get update`
 * `sudo apt-get install docker-ce -y`
 
