@@ -46,5 +46,19 @@ wget -O - https://raw.githubusercontent.com/icanfixitweb/Hassio-Virtual-Machine/
 > This last command will install Home Assistant in `/home/me/docker/hassio`. Replace `me` with your username or replace the whole path with your preferred path. 
 
 ***
+# ** UPDATE September 2020 **
+If the last step of the installation fails you can try running the step below:
+
+##### Install Home Assistant from latest script from Home assistant GitHub (working as of Sept. 2020)
+* `curl -sL https://raw.githubusercontent.com/home-assistant/supervised-installer/master/installer.sh | bash -s`
+
+##### If Network Manager is not installed [`[error] missing: NetworkManager`] install it first and then run the command above again:
+* `sudo apt-get install network-manager`
+
+
+
+
+***
 
 Once the installation is completed go to `http://hassio.local:8123/` or `http://yourIPaddress:8123/` (replace `yourIPaddress` with your actual IP address) from your web browser to access your new Home Assistant installation.
+
